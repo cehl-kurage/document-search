@@ -1,3 +1,7 @@
 # version specifiers
 .python-version
 poetry.lock
+
+# datasets
+data/
+!data/VRC.zip
