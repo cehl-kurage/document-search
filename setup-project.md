@@ -1,9 +1,11 @@
 # Setup guide of this project
+Currently this guide is for wsl and is not intended for other OS.
+
 ## Install poetry
 See [poetry oficial installation guide](https://python-poetry.org/docs/#installing-with-the-official-installer)
 
-## setup cuda(for windows)
-**If your OS is windows, DO NOT install nvidia-driver of linux**
+## setup cuda
+**DO NOT install nvidia-driver for linux**
 ### Install nvidia-driver
 Download nvidia-driver from https://www.nvidia.co.jp/Download/index.aspx?lang=jp  
 (Recommended driver is NVIDIA Studio)  
