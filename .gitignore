@@ -8,3 +8,6 @@ data/
 # faiss repositories
 build/
 faiss/
+
+# environmet variables
+.env
