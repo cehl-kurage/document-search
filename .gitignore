@@ -11,3 +11,6 @@ faiss/
 
 # environmet variables
 .env
+
+# settings
+settings.yaml
