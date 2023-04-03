@@ -7,3 +7,9 @@
 - tests/
     - scripts/: 
     - models/: 
+- configs/: hydraによってこのディレクトリ以下の設定が読み込まれます。
+    - config.yaml
+        検索に使用するモデルや`gradio`の設定を指定します。
+    - models/: 各検索モデルの設定を指定します。
+        - OpenAI_searcher.yaml
+        ...
