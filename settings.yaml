@@ -1,0 +1,6 @@
+api_key: "<WRITE YOUR API KEY>"
+
+emb_model: "text-embedding-ada-002"
+dir: "data/"
+chunk_size: 10000
+chunk_overlap: 0

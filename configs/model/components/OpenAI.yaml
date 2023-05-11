@@ -1,0 +1,5 @@
+_target_: src.models.components.OpenAI.OpenAISearcher
+chunk_size: 10000
+chunk_overlap: 0
+emb_model: "text-embedding-ada-002"
+dir: "../../../data/"

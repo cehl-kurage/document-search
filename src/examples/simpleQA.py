@@ -1,4 +1,4 @@
-from langchain import PromptTemplate, OpenAI, LLMChain
+from langchain import LLMChain, OpenAI, PromptTemplate
 
 API_KEY = "YOUR API KEY"
 template = """質問：{question}

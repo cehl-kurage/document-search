@@ -1,7 +1,16 @@
 # version specifiers
 .python-version
-poetry.lock
 
 # datasets
 data/
 !data/VRC.zip
+
+# faiss repositories
+build/
+faiss/
+
+# environmet variables
+.env
+
+# settings
+settings.yaml
