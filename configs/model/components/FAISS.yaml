@@ -1,4 +1,4 @@
-_target_: src.models.components.OpenAI.OpenAISearcher
+_target_: src.models.components.OpenAI.FAISSSearcher
 chunk_size: 10000
 chunk_overlap: 0
 emb_model: "text-embedding-ada-002"
