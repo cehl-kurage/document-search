@@ -3,7 +3,9 @@ from omegaconf import DictConfig
 
 
 class Searcher:
-    def __init__(self, cfg: DictConfig):
+    """This is the interface of the concrete searchers(implemented in ./components/)"""
+
+    def __init__(self, cfg: DictConfig) -> None:
         self.model = hydra.utils.instantiate(cfg.components)
 
     def search(self, api_key, query):
