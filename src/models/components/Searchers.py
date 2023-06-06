@@ -2,6 +2,7 @@ from abc import ABC, abstractmethod
 
 from langchain.document_loaders import NotionDirectoryLoader
 from langchain.embeddings.openai import OpenAIEmbeddings
+from langchain.text_splitter import CharacterTextSplitter
 from langchain.vectorstores import FAISS, Chroma
 from subprocess import run
 
@@ -15,12 +16,15 @@ class Searcher(ABC):
         dir="data/",
     ) -> None:
         self.docs = self.load_docs(dir)
+        self.chunk_size = chunk_size
+        self.chunk_overlap = chunk_overlap
         self.emb_model = emb_model
 
     def load_docs(self, dir: str):
         # load documents
         loader = NotionDirectoryLoader(dir)
         docs = loader.load()
+        docs = CharacterTextSplitter().split_documents(docs)
         return docs
 
     @abstractmethod
