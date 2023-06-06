@@ -3,7 +3,7 @@ import hydra
 import pyrootutils
 from omegaconf import DictConfig
 
-from models.Searcher import Searcher
+from models.Searcher import LLMTeacher
 
 root = pyrootutils.setup_root(
     __file__, indicator=".project-root", pythonpath=True
@@ -14,12 +14,11 @@ root = pyrootutils.setup_root(
 def run_gradio(cfg: DictConfig):
     api_key_input = gr.inputs.Textbox(label="API KEY")
     query_input = gr.inputs.Textbox(lines=3, label="query")
-    # file_input = gr.File()
     result_output = gr.outputs.Textbox(label="Search result")
-    searcher = Searcher(cfg.model)
+    searcher = LLMTeacher(cfg.model)
 
     interface = gr.Interface(
-        fn=searcher.search,
+        fn=searcher.answer,
         inputs=[api_key_input, query_input],
         outputs=result_output,
     )
