@@ -3,6 +3,7 @@
 
 # datasets
 data/
+!data/TUS
 !data/VRC.zip
 
 # faiss repositories
