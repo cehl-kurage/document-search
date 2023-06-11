@@ -1,10 +1,7 @@
-import os
-
 from dotenv import load_dotenv
 from langchain.document_loaders import NotionDirectoryLoader
 from langchain.embeddings.openai import OpenAIEmbeddings
-from langchain.text_splitter import CharacterTextSplitter
-from langchain.vectorstores import FAISS
+from langchain.vectorstores import Chroma
 
 load_dotenv()
 
@@ -16,9 +13,9 @@ docs = documents
 
 embeddings = OpenAIEmbeddings()
 
-db = FAISS.from_documents(docs, embeddings)
+db = Chroma.from_documents(docs, embeddings)
 
-query = "rolenz曲線を描く方法を教えてください。"
+query = "円を綺麗に描画する方法教えてください"
 docs = db.similarity_search(query)
 
 print(docs[0].page_content)
